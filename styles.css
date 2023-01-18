@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --dark-cyan-active: hsl(158, 46%, 17%);
+  --cream: hsl(30, 38%, 92%);
+  --dark-blue: hsl(212, 21%, 14%);
+  --grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --primary-font: 'Fraunces', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
+
+  --primary-font-size: 2rem;
+  --secondary-font-size: 0.875rem;
+  --small-font-size: 0.75rem;
+
+  --fw-bold: 700;
+}
+
+/* ---------css reset------------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+img,
+picture,
+figure {
+  width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* ---------------------------------- */
+
+body {
+  width: 100vw;
+  background-color: var(--cream);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9375rem;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0.9375rem;
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 23.4375rem;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.product-id {
+  text-transform: uppercase;
+  letter-spacing: 0.1875rem;
+}
+
+.title {
+  color: var(--dark-blue);
+  font-size: var(--primary-font-size);
+  font-family: var(--primary-font);
+  line-height: 1;
+  margin: 1rem 0;
+}
+
+.description,
+.product-id,
+.price-old {
+  color: var(--grayish-blue);
+  font-size: var(--secondary-font-size);
+  font-family: var(--secondary-font);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0 1rem;
+}
+
+.price-new {
+  color: var(--dark-cyan);
+  font-size: var(--primary-font-size);
+  font-family: var(--primary-font);
+  margin-right: 1rem;
+}
+
+/* button */
+.btn {
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  padding: 1em;
+  font-size: var(--secondary-font-size);
+  font-weight: var(--fw-bold);
+  font-family: var(--secondary-font);
+  border: 0;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--dark-cyan-active);
+}
+
+.cart-icon {
+  width: 1rem;
+  margin-right: 1em;
+}
+/* -------------------------------------- */
+
+/* footer */
+a {
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--dark-cyan);
+}
+
+@media all and (min-width: 37.5rem) {
+  .card {
+    max-width: 35.9375rem;
+    flex-flow: row nowrap;
+  }
+
+  .content {
+    flex: 1 1 50%;
+  }
+
+  .img-container {
+    flex: 1 1 50%;
+  }
+}
